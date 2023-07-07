@@ -4,7 +4,6 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import { NavItem } from "@/types";
-import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 function Navbar() {

@@ -1,8 +1,8 @@
 import React from "react";
 import s from "./Footer.module.css";
 import Link from "next/link";
-import Image from "next/image";
 import { siteConfig } from "@/config/site";
+import { Logo } from "@/components/UI";
 
 function Footer() {
   return (
@@ -11,14 +11,8 @@ function Footer() {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-12">
             <div className="col-span-5 flex flex-col gap-10">
-              <Image
-                className="relative dark:invert-0"
-                src={siteConfig?.default_logo}
-                alt="LEMON HIVE"
-                width={145}
-                height={80}
-                priority
-              />
+              <Logo width={145} height={80} />
+
               <p className="text-white">
                 © {new Date().getFullYear()}{" "}
                 <span className="text-secondary-light">{siteConfig?.name}</span>
