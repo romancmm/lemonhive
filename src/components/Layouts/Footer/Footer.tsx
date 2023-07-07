@@ -47,7 +47,7 @@ function Footer() {
             </div>
           </div>
         </Container>
-      </section>
+      </Section>
     </footer>
   );
 }
