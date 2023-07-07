@@ -2,12 +2,12 @@ import React from "react";
 import s from "./Footer.module.css";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { Container, Logo } from "@/components/UI";
+import {Section, Container, Logo } from "@/components/UI";
 
 function Footer() {
   return (
     <footer>
-      <section className="bg-midnight text-gray-100 py-20">
+      <Section>
         <Container>
           <div className="grid lg:grid-cols-12">
             <div className="col-span-5 flex flex-col gap-10">
