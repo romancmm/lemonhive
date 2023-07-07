@@ -1,0 +1,9 @@
+.nav {
+  @apply p-2 lg:px-4 text-slate-100 rounded hover:text-secondary-light flex flex-col items-center justify-center gap-2 w-full 
+  after:content-[''] after:bg-transparent after:h-2 after:w-2 after:rounded-full hover:after:bg-secondary-light 
+  transition-colors duration-300 ease-in-out;
+}
+
+.activeNav {
+  @apply text-secondary-light after:bg-secondary-light;
+}

@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import { NavItem } from "@/types";
 import { cn } from "@/lib/utils";
+import s from "./Navbar.module.css";
 
 function Navbar() {
   const pathname = usePathname();
@@ -20,12 +21,9 @@ function Navbar() {
             <li key={item?.href} className="group">
               <Link
                 href={item?.href ?? "/"}
-                className={cn(
-                  `p-2 lg:px-4 text-blue-100 rounded hover:text-secondary-light transition-colors duration-300`,
-                  {
-                    ["text-secondary-light"]: pathname === item?.href,
-                  }
-                )}
+                className={cn(s.nav, {
+                  [s.activeNav]: pathname === item?.href,
+                })}
               >
                 {item?.title}
               </Link>
@@ -54,7 +52,7 @@ function Navbar() {
 
           <Link
             href="#"
-            className="p-2 lg:px-5 md:mx-2 text-secondary-light text-center border border-solid border-secondary-light rounded-full hover:border-secondary-dark hover:text-secondary-dark transition-colors duration-300 mt-1 md:mt-0 md:ml-1"
+            className="p-2 md:-mt-3 lg:px-5 md:mx-2 text-secondary-light text-center border border-solid border-secondary-light rounded-full hover:border-secondary-dark hover:text-secondary-dark transition-colors duration-300"
           >
             Get in Touch
           </Link>
