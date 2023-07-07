@@ -8,21 +8,25 @@ function Footer() {
   return (
     <footer>
       <section className="bg-midnight text-gray-100 py-20">
-        <div className="container">
+        <div className="container mx-auto">
           <div className="grid lg:grid-cols-12">
-            <div className="col-span-5 flex flex-col gap-12">
+            <div className="col-span-5 flex flex-col gap-10">
               <Image
-                className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert-0"
+                className="relative dark:invert-0"
                 src={siteConfig?.default_logo}
                 alt="LEMON HIVE"
                 width={145}
                 height={80}
                 priority
               />
-              <p className="text-white">{siteConfig?.copyright}</p>
+              <p className="text-white">
+                © {new Date().getFullYear()}{" "}
+                <span className="text-secondary-light">{siteConfig?.name}</span>
+                . All rights reserved.
+              </p>
             </div>
-            <div className="col-span-5 flex flex-col gap-2">
-              <h6 className="text-secondary-dark text-2xl">
+            <div className="col-span-5 flex flex-col gap-3">
+              <h6 className="text-secondary-dark uppercase">
                 {siteConfig?.city}
               </h6>
               <span>{siteConfig?.address}</span>

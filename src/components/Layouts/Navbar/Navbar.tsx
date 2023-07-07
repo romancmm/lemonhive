@@ -16,19 +16,19 @@ function Navbar() {
         id="navbar-collapse"
         className="flex flex-1 items-center z-50 relative"
       >
-        <ul className="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0 justify-end items-center relative">
+        <ul className="hidden md:flex flex-col md:flex-row gap-6 md:ml-auto mt-3 md:mt-0 justify-end items-center relative">
           {siteConfig?.mainNav?.map((item: NavItem) => (
             <li key={item?.href} className="group">
               <Link
                 href={item?.href ?? "/"}
                 className={cn(
-                  `flex gap-1 items-center p-1 lg:px-4 text-blue-100 text-sm rounded hover:text-secondary-light transition-colors duration-300 uppercase`,
+                  `p-2 lg:px-4 text-blue-100 rounded hover:text-secondary-light transition-colors duration-300`,
                   {
-                    ["text-white font-bold"]: pathname === item?.href,
+                    ["text-secondary-light"]: pathname === item?.href,
                   }
                 )}
               >
-                {item?.title} {item?.children && <ChevronDown height={20} />}
+                {item?.title}
               </Link>
 
               {item?.children && (
@@ -55,7 +55,7 @@ function Navbar() {
 
           <Link
             href="#"
-            className="p-2 lg:px-4 md:mx-2 text-secondary-light text-center border border-solid border-secondary-light rounded-full hover:bg-secondary-light hover:text-white transition-colors duration-300 mt-1 md:mt-0 md:ml-1"
+            className="p-2 lg:px-5 md:mx-2 text-secondary-light text-center border border-solid border-secondary-light rounded-full hover:border-secondary-dark hover:text-secondary-dark transition-colors duration-300 mt-1 md:mt-0 md:ml-1"
           >
             Get in Touch
           </Link>
