@@ -1,12 +1,12 @@
 import type { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
-  name: "Lemon Hive",
+  name: "Lemonhive",
   description: `Innovative Solutions for a Digital World Trusted Agency`,
   default_logo: "/images/logo.svg",
   url: "https://lemonhive-weld.vercel.app/",
   ogImage: "https://lemonhive-weld.vercel.app/opengraph-image.png",
-  copyright: `© ${new Date().getFullYear()} Lemin Hive. All rights reserved.`,
+  copyright: `© ${new Date().getFullYear()} Leminhive. All rights reserved.`,
   city: "London",
   address: "20-22 Wenlock Road, London, N1 7GU",
   tell: "+44 207 1188550",
@@ -33,7 +33,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       title: "Blog",
-      href: "/blogs",
+      href: "#",
     },
   ],
 
